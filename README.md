@@ -44,8 +44,9 @@ private final String procName="{call P_GET_DEALER_OPERATOR(?,?)}";
     private JdbcTemplate jdbcTemplate;
 
     @Test
-    public List<Dealer> getDealerOperator(ProcedureParamTest param)throws Exception{
-
+    public List<Dealer> getDealerOperator()throws Exception{
+        ProcedureParamTest param=new ProcedureParamTest();
+        param.setName("nico");
         List<Dealer>  result= (List<Dealer>) ProcedureUtil.execProcedureReturenTList(procName,param,jdbcTemplate);
 
         return  result;
