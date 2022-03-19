@@ -37,7 +37,7 @@ public class ProcedureParamTest implements Serializable, ProcedureParam {
 
 At last call the method like this:
 
-```
+```Java
 private final String procName="{call P_GET_DEALER_OPERATOR(?,?)}";
 
     @Autowired
